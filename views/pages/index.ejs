@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>    
+    <%- include('./registration'); %>
+
+
+
+        <script>
+            let focusId = "";
+            $(document).ready(function () {
+
+                $(document).on('focus', 'input', function (e) {
+                    let curruntId = e.target.id;
+                    console.log("in side foucuse", curruntId);
+                    if (curruntId != 'gender') {
+                        if ($("#" + curruntId).val() == "") {
+                            $("#" + curruntId).css('border', '5px solid red');
+                        }
+                        eventCheck(false)
+                    }
+                });
+
+                $(document).keyup(function (e) {
+                    let curruntId = e.target.id;
+                    let curruntres = '';
+                    switch (curruntId) {
+                        case 'firstName':
+                            $('#firstName').val($('#firstName').val().replace(/[^a-z]/gi, ''));
+                            curruntres = /^[a-zA-Z]+$/.test($('#firstName').val());
+                            break;
+                        case 'lastName':
+                            $('#lastName').val($('#lastName').val().replace(/[^a-z]/gi, ''));
+                            curruntres = /^[a-zA-Z]+$/.test($('#lastName').val());
+                            break;
+                        case 'email':
+                            // $('#email').val($('#email').val().replace(/[^a-z]/gi, ''));
+                            curruntres = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('#email').val());
+                            break;
+                        case 'mobile':
+                            $('#mobile').val($('#mobile').val().replace(/[^0-9]/gi, ''));
+                            curruntres = /^[6-9]\d{9}$/gi.test($('#mobile').val());
+                            break;
+                        default:
+
+                    }
+                    if (curruntres) {
+                        $("#" + curruntId).css('border', '1px solid #4d66a9');
+                        eventCheck(true)
+                    } else {
+                        $("#" + curruntId).css('border', '5px solid red');
+                        eventCheck(false)
+                    }
+                });
+            })
+        </script>
+        <script src="/public/js/validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+.header {
+    width: 100%;
+    background-color: rgb(210, 210, 210);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header>button {
+    margin: 10px;
+    height: 40px;
+    border: solid #4b66a9 1px;
+    border-radius: 5px;
+    color: #526be9;
+}
+
+.model-registration {
+    /* display: none; */
+    background-color: aliceblue;
+    height: 600px;
+    width: 50%;
+    align-self: center;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+
+.model-registration .model-input-table {
+    margin-top: 5%;
+}
+
+.model-input-table-name>* label {
+    width: 150px;
+    text-align: right;
+}
+
+.model-input-table-name>* input {
+    margin: 10px;
+    height: 40px;
+    border: solid #4b66a9 1px;
+    border-radius: 5px;
+    color: #526be9;
+    width: 195px;
+    margin-left: 30px;
+}
+
+.model-input-table-name>* select {
+    margin: 10px;
+    height: 40px;
+    border: solid #4b66a9 1px;
+    border-radius: 5px;
+    color: #526be9;
+    width: 195px;
+    margin-left: 30px;
+}
+
+.model-input-table-name>* button {
+    margin: 10px;
+    height: 40px;
+    border: solid #4b66a9 1px;
+    border-radius: 5px;
+    color: #526be9;
+    margin-left: 30px;
+}
+
+.model-input-table-gender>* label {
+    width: 150px;
+    text-align: right;
+}
+
+.model-input-table-gender>* input {
+    background: rgb(245, 236, 230);
+    /* width: 200px; */
+    margin-left: 30px;
+}
+
+
+.login-title {
+    margin-top: -25px;
+    margin-left: 5%;
+    font-size: xx-large;
+}
+
+.icon-close {
+    margin-top: 20px;
+    margin-left: 95%;
+}
+
+.icon-close:hover {
+    box-shadow: 5px 5px 5px #888888;
+}
+
+button:hover {
+    background-color: #526be9;
+    color: white;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.invalidInput {
+    border: '5px solid red'
+}

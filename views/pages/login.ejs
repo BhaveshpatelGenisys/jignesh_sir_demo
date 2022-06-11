@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+
+    <div class="model-login">
+        <div>
+            <i class="fa fa-close icon-close"></i>
+            <div class="login-title"> <b> Registration </b> </div>
+            <div class="model-input-table">
+                <form action="" method="post" onsubmit="return velidateForm()">
+                    <table border="0">
+                        <tr class="model-input-table-name">
+                            <td>
+                                <label for="">Name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="firstName" name="firstName" placeholder="Fiist Name">
+                            </td>
+                            <td>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                            </td>
+                        </tr>
+                        <tr class="model-input-table-gender">
+                            <td>
+                                <label for=""> Gender</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="gender" name="gender" value="Male"> Male
+                                <input type="radio" id="gender" name="gender" value="Female"> Female
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr class="model-input-table-name">
+                            <td>
+                                <label for=""> Email</label>
+                            </td>
+                            <td>
+                                <input type="text" id="email" name="email" placeholder="Email">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr class="model-input-table-name">
+                            <td>
+                                <label for=""> Mobile</label>
+                            </td>
+                            <td>
+                                <input type="text" id="mobile" name="mobile" placeholder="Mobile">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr class="model-input-table-name">
+                            <td>
+                                <label for=""> Professions</label>
+                            </td>
+                            <td>
+                                <select id="professions" name="professions">
+                                    <option value="" selected>Select Professions</option>
+                                    <option value="student">Student</option>
+                                    <option value="service">Service</option>
+                                    <option value="SelfEmployme">Self Employme</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr class="model-input-table-name">
+                            <td>
+                                <label for=""> Birth Date</label>
+                            </td>
+                            <td>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr class="model-input-table-name">
+                            <td></td>
+                            <td>
+                                <button type="submit">Submit</button>
+                                <button type="reset">Reset</button>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    </script>
+    <script src="/public/js/validation.js"></script>
+</body>
+
+</html>
